@@ -26,7 +26,9 @@ export function GiveAttempts(): React.JSX.Element {
             <div>
                 {attempts}
                 <Button onClick={updateAttempts}>Gain</Button>
-                <Button onClick={use}>Use</Button>
+                <Button onClick={use} disabled={attempts > 0 ? false : true}>
+                    Use
+                </Button>
                 <Form.Group controlId="formAnswer">
                     <Form.Label>Attempts:</Form.Label>
                     <Form.Control
